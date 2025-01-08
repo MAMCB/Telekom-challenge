@@ -6,7 +6,7 @@ import "./App.css";
 function App() {
   return <>
   <Router>
-    <nav>
+    <nav className="flex justify-evenly">
       <Link to='/'>Home</Link>
       <Link to='/profile'>Profile</Link>
     </nav>
