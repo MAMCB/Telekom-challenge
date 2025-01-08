@@ -9,7 +9,46 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'TeleNeo';
+  src: url('./assets/fonts/TeleNeoWeb-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TeleNeo';
+  src: url('./assets/fonts/TeleNeoWeb-MediumItalic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'TeleNeo';
+  src: url('./assets/fonts/TeleNeoWeb-BoldItalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+}
+
 body {
   font-family: 'TeleNeo', sans-serif;
+  
+}
+
+.telekom-color {
+  color: #e20074;
+}
+
+.telekom-font {
+  font-family: 'TeleNeo', sans-serif;
+}
+
+.telekom-bg {
+  background-color: #e20074;
+}
+
+.telekom-title {
   color:#e20074 ;
+  font-size: 2rem;
+  font-weight: bold;
 }
