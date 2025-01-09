@@ -1,0 +1,65 @@
+{
+    "projects": [
+        {
+            "id": 1,
+            "title": "Project 1",
+            "description": "Description 1",
+            "image": "image1.jpg"
+        },
+        {
+            "id": 2,
+            "title": "Project 2",
+            "description": "Description 2",
+            "image": "image2.jpg"
+        },
+        {
+            "id": 3,
+            "title": "Project 3",
+            "description": "Description 3",
+            "image": "image3.jpg"
+        }
+    ],
+    "news": [
+        {
+            "id": 1,
+            "title": "News 1",
+            "description": "Description 1",
+            "image": "image1.jpg"
+        },
+        {
+            "id": 2,
+            "title": "News 2",
+            "description": "Description 2",
+            "image": "image2.jpg"
+        },
+        {
+            "id": 3,
+            "title": "News 3",
+            "description": "Description 3",
+            "image": "image3.jpg"
+        }
+    ],
+    "events": [
+        {
+            "id": 1,
+            "title": "Event 1",
+            "description": "Description 1",
+            "image": "image1.jpg",
+            "date": "2020-01-01"
+        },
+        {
+            "id": 2,
+            "title": "Event 2",
+            "description": "Description 2",
+            "image": "image2.jpg",
+            "date": "2020-01-02"
+        },
+        {
+            "id": 3,
+            "title": "Event 3",
+            "description": "Description 3",
+            "image": "image3.jpg",
+            "date": "2020-01-03"
+        }
+    ]
+}
