@@ -4,16 +4,22 @@ import Profile from "./components/Profile";
 import Projects from "./components/Projects";
 import Events from "./components/Events";
 import ProjectDetails from "./components/ProjectDetails";
+import News from "./components/News";
+import telekomLogo from "./assets/telekom-logo.svg";
 import "./App.css";
 
 function App() {
   return (
     <>
       <Router>
-        <nav className="flex justify-evenly my-5">
-          <Link to="/">Home</Link>
-          <Link to="/events">Events</Link>
+        <nav className="flex justify-between m-5 nav">
+          <Link to="/">
+            <img src={telekomLogo} alt="Telekom Logo" width="50" height="50" />
+          </Link>
+          <Link to="/news">News</Link>
           <Link to="/projects">Projects</Link>
+          <Link to="/events">Events</Link>
+
           <Link to="/profile">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -36,7 +42,8 @@ function App() {
           <Route path="/events" element={<Events />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/profile" element={<Profile />} />
-          <Route path="/project/{id}" element={<ProjectDetails/>}/>
+          <Route path="/news" element={<News />} />
+          <Route path="/project/{id}" element={<ProjectDetails />} />
         </Routes>
       </Router>
     </>

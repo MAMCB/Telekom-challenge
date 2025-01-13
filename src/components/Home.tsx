@@ -1,17 +1,23 @@
-
+import { Carousel } from "flowbite-react";
+import Cards from "./Cards";
+import campusImage from "../images/campus.jpg";
+import techOfficeImage from "../images/tech office.jpg";
+import techPresentationImage from "../images/tech presentation.jpg";
 
 const Home = () => {
   return (
     <div>
-      <h1 className="text-2xl m-5 telekom-title">Welcome to Telekom's project platform</h1>
-      <div className="flex justify-evenly bg-gray-300 rounded-lg
-      p-4">
-        <h2>News</h2>
-        <h2>Projects</h2>
-        <h2>Events</h2>
-        </div>
-    </div>
-  )
-}
+      <h1 className="text-2xl mx-5 my-9 telekom-title">
+        Welcome to Telekom's student platform
+      </h1>
 
-export default Home
+      <Carousel>
+        <Cards route="/news" img={techOfficeImage} title="News from Telekom" description="Explore the latest news within Telekom" />
+        <Cards route="/projects" img={techPresentationImage} title="Projects" description="Explore the latest projects within Telekom" />
+        <Cards route="/events" img={campusImage} title="Events" description="Explore the latest events within Telekom" />
+      </Carousel>
+    </div>
+  );
+};
+
+export default Home;

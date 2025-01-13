@@ -32,6 +32,8 @@
 
 body {
   font-family: 'TeleNeo', sans-serif;
+  background-color: rgba(226, 213, 213, 0.096);
+  color:#383838;
   
 }
 
@@ -51,4 +53,33 @@ body {
   color:#e20074 ;
   font-size: 2rem;
   font-weight: bold;
+}
+
+.background-image {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 20rem;
+  width: 100%;
+}
+
+.cardText{
+  /* From https://css.glass */
+background: rgba(255, 255, 255, 0.7);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+font-weight: 600;
+}
+
+.nav{
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.nav a:hover{
+  color: #e20074;
 }
