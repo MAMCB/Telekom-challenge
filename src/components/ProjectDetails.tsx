@@ -8,10 +8,11 @@ interface Project {
     title: string;
     description: string;
     image: string;
+    category:string
 }
 
 const ProjectDetails = () => {
-    const { id } = useParams();
+    const { id } = useParams<{ id: string }>();
     const [project, setProject] = useState<Project|null>(null)
     useEffect(() => {
         fetch(`../../data.json`)
@@ -21,11 +22,11 @@ const ProjectDetails = () => {
   return (
     <>
       {project && (
-        <div>
-          <h1>{project.title}</h1>
-          <div>
-            <img src={project.image} alt={project.title} />
-            <p>{project.description}</p>
+        <div className="p-5">
+          <h1 className="telekom-title">{project.title}</h1>
+          <div className="flex justify-center align-center p-4">
+            <img src={project.image} alt={project.title} className="rounded-lg w-1/2" />
+            <p className="self-center m-4 text-xl leading-relaxed">{project.description}</p>
           </div>
         </div>
       )}

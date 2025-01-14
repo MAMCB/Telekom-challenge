@@ -1,42 +1,69 @@
 {
     "projects": [
-        {
-            "id": 1,
-            "title": "Project 1",
-            "description": "Description 1",
-            "image": "image1.jpg"
-        },
-        {
-            "id": 2,
-            "title": "Project 2",
-            "description": "Description 2",
-            "image": "image2.jpg"
-        },
-        {
-            "id": 3,
-            "title": "Project 3",
-            "description": "Description 3",
-            "image": "image3.jpg"
-        }
+      {
+        "id": 1,
+        "title": "AI integration to increase efficiency",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pulvinar leo varius,\n fermentum ex id, faucibus eros. Morbi eros velit, mollis sit amet quam et, convallis pulvinar ante.\n Mauris vel est eu est sagittis ultricies non nec dolor. Nulla cursus metus quis auctor tincidunt. Maecenas ac leo fringilla, fermentum erat eu, \naliquet purus. Duis feugiat quam dictum molestie rhoncus. Maecenas sit amet justo id nulla malesuada efficitur eget sit amet lectus.",
+        "image": "/images/neural-network.jpg",
+        "category": "AI"
+      },
+      {
+        "id": 2,
+        "title": "Media integration to increase efficiency",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pulvinar leo varius,\n fermentum ex id, faucibus eros. Morbi eros velit, mollis sit amet quam et, convallis pulvinar ante.\n Mauris vel est eu est sagittis ultricies non nec dolor. Nulla cursus metus quis auctor tincidunt. Maecenas ac leo fringilla, fermentum erat eu, \naliquet purus. Duis feugiat quam dictum molestie rhoncus. Maecenas sit amet justo id nulla malesuada efficitur eget sit amet lectus.",
+        "image": "/images/media.jpg",
+        "category": "Media"
+      },
+      {
+        "id": 3,
+        "title": "New system architecture",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pulvinar leo varius,\n fermentum ex id, faucibus eros. Morbi eros velit, mollis sit amet quam et, convallis pulvinar ante.\n Mauris vel est eu est sagittis ultricies non nec dolor. Nulla cursus metus quis auctor tincidunt. Maecenas ac leo fringilla, fermentum erat eu, \naliquet purus. Duis feugiat quam dictum molestie rhoncus. Maecenas sit amet justo id nulla malesuada efficitur eget sit amet lectus.",
+        "image": "/images/software-engineering.jpg",
+        "category": "Engineering"
+      },
+      {
+        "id": 4,
+        "title": "AI model research",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pulvinar leo varius,\n fermentum ex id, faucibus eros. Morbi eros velit, mollis sit amet quam et, convallis pulvinar ante.\n Mauris vel est eu est sagittis ultricies non nec dolor. Nulla cursus metus quis auctor tincidunt. Maecenas ac leo fringilla, fermentum erat eu, \naliquet purus. Duis feugiat quam dictum molestie rhoncus. Maecenas sit amet justo id nulla malesuada efficitur eget sit amet lectus.",
+        "image": "/images/tech-presentation.jpg",
+        "category": "AI"
+      },
+      {
+        "id": 5,
+        "title": "Media project",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pulvinar leo varius,\n fermentum ex id, faucibus eros. Morbi eros velit, mollis sit amet quam et, convallis pulvinar ante.\n Mauris vel est eu est sagittis ultricies non nec dolor. Nulla cursus metus quis auctor tincidunt. Maecenas ac leo fringilla, fermentum erat eu, \naliquet purus. Duis feugiat quam dictum molestie rhoncus. Maecenas sit amet justo id nulla malesuada efficitur eget sit amet lectus.",
+        "image": "/images/campus.jpg",
+        "category": "Media"
+      },
+      {
+        "id": 6,
+        "title": "Systems development",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pulvinar leo varius,\n fermentum ex id, faucibus eros. Morbi eros velit, mollis sit amet quam et, convallis pulvinar ante.\n Mauris vel est eu est sagittis ultricies non nec dolor. Nulla cursus metus quis auctor tincidunt. Maecenas ac leo fringilla, fermentum erat eu, \naliquet purus. Duis feugiat quam dictum molestie rhoncus. Maecenas sit amet justo id nulla malesuada efficitur eget sit amet lectus.",
+        "image": "/images/tech-office.jpg",
+        "category": "Engineering"
+      }
     ],
     "news": [
         {
-            "id": 1,
-            "title": "News 1",
-            "description": "Description 1",
-            "image": "image1.jpg"
+          "id": 1,
+          "title": "News 1",
+          "description": "Description 1",
+          "image": "image1.jpg",
+          "category": "Category 1"
         },
         {
-            "id": 2,
-            "title": "News 2",
-            "description": "Description 2",
-            "image": "image2.jpg"
+          "id": 2,
+          "title": "News 2",
+          "description": "Description 2",
+          "image": "image2.jpg",
+          "category": "Category 1"
         },
         {
-            "id": 3,
-            "title": "News 3",
-            "description": "Description 3",
-            "image": "image3.jpg"
+          "id": 3,
+          "title": "News 3",
+          "description": "Description 3",
+          "image": "image3.jpg",
+          "category": "Category 2"
         }
     ],
     "events": [
