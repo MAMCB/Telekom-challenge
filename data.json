@@ -94,23 +94,23 @@
         "id": 1,
         "name": "John Doe",
         "email": "john_doe@gmail.com",
-        "avatar": "avatar1.jpg",
+        "avatar": "/images/profile.png",
         "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pulvinar leo varius, fermentum ex id, faucibus eros. Morbi eros velit, mollis sit amet quam et, convallis pulvinar ante. Mauris vel est eu est sagittis ultricies non nec dolor. Nulla cursus metus quis auctor tincidunt. Maecenas ac leo fringilla, fermentum erat eu, aliquet purus. Duis feugiat quam dictum molestie rhoncus. Maecenas sit amet",
         "socialMedia":[
           {
             "name": "Facebook",
             "url": "https://www.facebook.com",
-            "logo": "facebook.png"
+            "logo": "/images/facebook.png"
           },
           {
             "name": "GitHub",
             "url": "https://www.github.com",
-            "logo": "github.png"
+            "logo": "/images/github.png"
           },
           {
             "name": "LinkedIn",
             "url": "https://www.linkedin.com",
-            "logo": "linkedin.png"
+            "logo": "/images/linkedin.png"
           }
         ]
       }
