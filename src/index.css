@@ -80,6 +80,13 @@ font-weight: 600;
   line-height: 2rem;
 }
 
-.nav a:hover{
+.nav a:hover , .profile-modal a:hover , .nav svg:hover{
   color: #e20074;
+  cursor: pointer;
+}
+
+.profile-modal{
+  color:white;
+  background-color: rgba(15, 14, 14, 0.733);
+  
 }
