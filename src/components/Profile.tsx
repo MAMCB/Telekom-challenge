@@ -8,6 +8,8 @@ interface Profile {
   avatar: string;
   bio: string;
   socialMedia: SocialMedia[] | [];
+  projects: number[] | [];
+  events: number[] | [];
 }
 interface SocialMedia{
   name:string;

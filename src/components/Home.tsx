@@ -3,6 +3,8 @@ import Cards from "./Cards";
 import campusImage from "../images/campus.jpg";
 import techOfficeImage from "../images/tech office.jpg";
 import techPresentationImage from "../images/tech presentation.jpg";
+import ProjectGrid from "./ProjectGrid";
+import Calendar from "./Calendar";
 
 const Home = () => {
   return (
@@ -16,6 +18,10 @@ const Home = () => {
         <Cards route="/projects" img={techPresentationImage} title="Projects" description="Explore the latest projects within Telekom" />
         <Cards route="/events" img={campusImage} title="Events" description="Explore the latest events within Telekom" />
       </Carousel>
+      <div>
+        <Calendar />
+        <ProjectGrid />
+      </div>
     </div>
   );
 };

@@ -12,7 +12,7 @@ const ProfileModal = ({signedUp,userId,visible}:ProfileModalProps) => {
       style={{
         display: visible ? "block" : "none",
         position: "fixed",
-        top: "20px", // Adjust the top margin
+        top: "50px", // Adjust the top margin
         right: "20px",
       }}
     >

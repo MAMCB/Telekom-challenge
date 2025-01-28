@@ -10,7 +10,7 @@ interface Project {
     image: string;
     category:string
 }
-
+//to do add a button to add project to my projects, save in local storage the project id
 const ProjectDetails = () => {
     const { id } = useParams<{ id: string }>();
     const [project, setProject] = useState<Project|null>(null)
