@@ -119,6 +119,7 @@ font-weight: 600;
   }
 
   .date {
+    position: relative;
     background: #ddd;
     color: black;
     height: 50px;
@@ -127,4 +128,14 @@ font-weight: 600;
 
   .empty {
     background: transparent;
+  }
+
+  .event{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: green;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
   }

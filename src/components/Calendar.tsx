@@ -1,11 +1,22 @@
 //to do display events from my events in a calender view, get events from local storage and data.json
 import { useState } from "react";
+import { useEffect } from "react";
 
 interface CalendarProps {
   year: number;
   month: number; // 0 (January) to 11 (December)
   monthName:string;
   
+}
+
+interface Events{
+  id:number;
+  title:string;
+  description:string;
+  image:string;
+  month:number;
+  day:number;
+  year:number;
 }
 
 const Calendar = ({year,month,monthName}:CalendarProps) => {
@@ -27,6 +38,27 @@ const Calendar = ({year,month,monthName}:CalendarProps) => {
   ];  
   const numberDays = new Date(displayMonth.year, displayMonth.month + 1, 0).getDate();
     const startDay = new Date(displayMonth.year, displayMonth.month, 1).getDay();
+
+    const [events, setEvents] = useState<Events[] | []>([])
+    useEffect(() => {
+      const storedEvents = localStorage.getItem("events");
+      const initialEvents: Events[] = storedEvents
+        ? JSON.parse(storedEvents)
+        : [];
+
+      fetch(`../../data.json`)
+        .then((response) => response.json())
+        .then((data) => {
+          const myEvents = data.profiles[0].events;
+          const eventsData = data.events.filter((event: Events) =>
+            myEvents.includes(event.id)
+          );
+
+          // Merge both event sources
+          setEvents([...initialEvents, ...eventsData]);
+        });
+    }, []);
+
 
     const previousMonth = () => {
       if (displayMonth.month === 0) {
@@ -67,6 +99,12 @@ const Calendar = ({year,month,monthName}:CalendarProps) => {
             {Array.from({ length: numberDays }).map((_, i) => (
               <div key={i} className={"date" + (i + 1 === new Date().getDate() && displayMonth.month === new Date().getMonth() && displayMonth.year === new Date().getFullYear() ? " today" : "")}>
                 {i + 1}
+                {events && events.map((event) => {
+                  if (event.month === displayMonth.month && event.year === displayMonth.year && event.day === i + 1) {
+                    return <span key={`${event.title}-${i}`} className="event"></span>;
+                  }
+                  return null;
+                })}
               </div>
             ))}
           </div>
