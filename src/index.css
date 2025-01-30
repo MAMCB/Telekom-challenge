@@ -46,8 +46,8 @@ body {
   font-family: 'TeleNeo', sans-serif;
 }
 
-.telekom-bg {
-  background-color: #e20074;
+.telekom-bg, .today {
+  background-color: #e20074!important;
 }
 
 .telekom-title {
@@ -91,3 +91,40 @@ font-weight: 600;
   background-color: rgba(15, 14, 14, 0.733);
   
 }
+
+ .calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  max-width: 600px;
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+  .day, .date {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .day {
+    background: #333;
+    color: white;
+  }
+
+  .date {
+    background: #ddd;
+    color: black;
+    height: 50px;
+    border-radius: 5px;
+  }
+
+  .empty {
+    background: transparent;
+  }
