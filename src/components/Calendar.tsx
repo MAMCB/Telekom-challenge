@@ -1,6 +1,8 @@
 //to do display events from my events in a calender view, get events from local storage and data.json
 import { useState } from "react";
 import { useEffect } from "react";
+import { Button, Timeline } from "flowbite-react";
+import { HiArrowNarrowRight, HiCalendar } from "react-icons/hi";
 
 interface CalendarProps {
   year: number;
@@ -17,6 +19,11 @@ interface Events{
   month:number;
   day:number;
   year:number;
+}
+
+interface HiglightedEvents{
+  id:number;
+  higlihted:boolean;
 }
 
 const Calendar = ({year,month,monthName}:CalendarProps) => {
@@ -40,6 +47,7 @@ const Calendar = ({year,month,monthName}:CalendarProps) => {
     const startDay = new Date(displayMonth.year, displayMonth.month, 1).getDay();
 
     const [events, setEvents] = useState<Events[] | []>([])
+    const [highlightedEvents, setHighlightedEvents] = useState<HiglightedEvents | null>(null)  
     useEffect(() => {
       const storedEvents = localStorage.getItem("events");
       const initialEvents: Events[] = storedEvents
@@ -78,42 +86,123 @@ const Calendar = ({year,month,monthName}:CalendarProps) => {
 
   return (
     <>
-      {displayMonth && (
-        <div>
-          <h1 className="text-center">{displayMonth.year}</h1>
-          <h2 className="text-center">{displayMonth.monthName}</h2>
-          <div className="calendar">
-            {/* Days of the Week */}
-            {daysOfWeek.map((day) => (
-              <div key={day} className="day">
-                {day}
-              </div>
-            ))}
+      <div className="flex gap-5">
+        {displayMonth && (
+          <div>
+            <h1 className="text-center">{displayMonth.year}</h1>
+            <h2 className="text-center">{displayMonth.monthName}</h2>
+            <div className="calendar">
+              {/* Days of the Week */}
+              {daysOfWeek.map((day) => (
+                <div key={day} className="day">
+                  {day}
+                </div>
+              ))}
 
-            {/* Empty cells for alignment */}
-            {Array.from({ length: startDay }).map((_, i) => (
-              <div key={`empty-${i}`} className="empty"></div>
-            ))}
+              {/* Empty cells for alignment */}
+              {Array.from({ length: startDay }).map((_, i) => (
+                <div key={`empty-${i}`} className="empty"></div>
+              ))}
 
-            {/* Days of the Month */}
-            {Array.from({ length: numberDays }).map((_, i) => (
-              <div key={i} className={"date" + (i + 1 === new Date().getDate() && displayMonth.month === new Date().getMonth() && displayMonth.year === new Date().getFullYear() ? " today" : "")}>
-                {i + 1}
-                {events && events.map((event) => {
-                  if (event.month === displayMonth.month && event.year === displayMonth.year && event.day === i + 1) {
-                    return <span key={`${event.title}-${i}`} className="event"></span>;
+              {/* Days of the Month */}
+              {Array.from({ length: numberDays }).map((_, i) => (
+                <div
+                  key={i}
+                  className={
+                    "date" +
+                    (i + 1 === new Date().getDate() &&
+                    displayMonth.month === new Date().getMonth() &&
+                    displayMonth.year === new Date().getFullYear()
+                      ? " today"
+                      : "")
                   }
-                  return null;
-                })}
-              </div>
+                >
+                  {i + 1}
+                  {events &&
+                    events.map((event) => {
+                      if (
+                        event.month === displayMonth.month &&
+                        event.year === displayMonth.year &&
+                        event.day === i + 1
+                      ) {
+                        return (
+                          <span
+                            onMouseEnter={() =>
+                              setHighlightedEvents({
+                                id: event.id,
+                                higlihted: true,
+                              })
+                            }
+                            onMouseLeave={() => setHighlightedEvents(null)}
+                            key={`${event.title}-${i}`}
+                            className="event"
+                          ></span>
+                        );
+                      }
+                      return null;
+                    })}
+                </div>
+              ))}
+            </div>
+            <div className="flex justify-center gap-4">
+              <button onClick={previousMonth}>Previous</button>
+              <button onClick={nextMonth}>Next</button>
+            </div>
+          </div>
+        )}
+        <Timeline>
+          {events &&
+            events.map((event) => (
+              <Timeline.Item key={event.id}>
+                <Timeline.Point icon={HiCalendar} />
+                <Timeline.Content
+                  className={
+                    "rounded-lg " +
+                    (highlightedEvents?.id === event.id &&
+                    highlightedEvents.higlihted
+                      ? " bg-green-600"
+                      : "")
+                  }
+                >
+                  <Timeline.Time
+                    className={
+                      highlightedEvents?.id === event.id &&
+                      highlightedEvents.higlihted
+                        ? " text-white"
+                        : ""
+                    }
+                  >
+                    {months[event.month] + " " + event.day}
+                  </Timeline.Time>
+                  <Timeline.Title
+                    className={
+                      highlightedEvents?.id === event.id &&
+                      highlightedEvents.higlihted
+                        ? " text-white"
+                        : ""
+                    }
+                  >
+                    {event.title}
+                  </Timeline.Title>
+                  <Timeline.Body
+                    className={
+                      highlightedEvents?.id === event.id &&
+                      highlightedEvents.higlihted
+                        ? " text-white"
+                        : ""
+                    }
+                  >
+                    {event.description}
+                  </Timeline.Body>
+                  <Button color="gray">
+                    Details
+                    <HiArrowNarrowRight className="ml-2 h-3 w-3" />
+                  </Button>
+                </Timeline.Content>
+              </Timeline.Item>
             ))}
-          </div>
-          <div className="flex justify-center gap-4">
-            <button onClick={previousMonth}>Previous</button>
-            <button onClick={nextMonth}>Next</button>
-          </div>
-        </div>
-      )}
+        </Timeline>
+      </div>
     </>
   );
 }

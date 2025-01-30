@@ -48,6 +48,7 @@ body {
 
 .telekom-bg, .today {
   background-color: #e20074!important;
+  color: white !important;
 }
 
 .telekom-title {
