@@ -1,6 +1,10 @@
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
+import {  Timeline } from "flowbite-react";
+//import { HiArrowNarrowRight, HiCalendar } from "react-icons/hi";
+//add cv to profile in data.json and display it in the profile page
+
 interface Profile {
   id: number;
   name: string;
@@ -27,16 +31,20 @@ const Profile = () => {
     }, [id]);
   return (
     <div className="p-8">
-      <h1 className="self-center telekom-title">{profile?.name}</h1>
-      <div className="flex justify-start align-center p-4">
+      <h1 className="self-center lg:ml-48 telekom-title">{profile?.name}</h1>
+      <div className="flex flex-col lg:flex-row justify-start align-center p-4">
         <img src={profile?.avatar} alt={profile?.name} />
 
-        <p className="max-w-lg self-center ml-8">{profile?.bio}</p>
+        <p className="max-w-lg self-center ml-8 p-5">{profile?.bio}</p>
+        <div>
+          <h2>CV</h2>
+          <Timeline></Timeline>
+        </div>
       </div>
       <div className="flex justify-start align-center p-4">
         <div className="m-8 p-4">
-          <h2 className="">{profile?.email}</h2>
-          <div className="grid grid-cols-3 gap-4">
+          <h2 className="lg:ml-32">{profile?.email}</h2>
+          <div className=" lg:ml-32 grid grid-cols-3 gap-4">
             {profile?.socialMedia.map((socialMedia) => (
               <a target="_blank" href={socialMedia.url}>
                 <img
