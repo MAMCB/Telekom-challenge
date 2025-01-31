@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 import {  Timeline } from "flowbite-react";
-//import { HiArrowNarrowRight, HiCalendar } from "react-icons/hi";
+import {  HiCalendar } from "react-icons/hi";
 //add cv to profile in data.json and display it in the profile page
 
 interface Profile {
@@ -14,11 +14,32 @@ interface Profile {
   socialMedia: SocialMedia[] | [];
   projects: number[] | [];
   events: number[] | [];
+  cv:CV;
+
 }
 interface SocialMedia{
   name:string;
   url:string;
   logo:string;
+}
+
+interface Education{
+  id:number;
+  degree:string;
+  school:string;
+  year:number;
+}
+
+interface Experience{
+  id:number;
+  title:string;
+  company:string;
+  year:number;
+}
+
+interface CV {
+  education: Education[];
+  experience: Experience[];
 }
 
 const Profile = () => {
@@ -29,16 +50,55 @@ const Profile = () => {
         .then((response) => response.json())
         .then((data) => setProfile(data.profiles.find((profile: Profile) => profile.id === parseInt(id ? id : ""))));
     }, [id]);
+
+    useEffect(() => {
+      console.log(profile);
+    }, [profile]);
   return (
     <div className="p-8">
       <h1 className="self-center lg:ml-48 telekom-title">{profile?.name}</h1>
-      <div className="flex flex-col lg:flex-row justify-start align-center p-4">
-        <img src={profile?.avatar} alt={profile?.name} />
+      <div className="flex flex-col lg:flex-row justify-around align-center p-4">
+        <div className="flex justify-center align-center p-4">
+          <img src={profile?.avatar} alt={profile?.name} />
 
-        <p className="max-w-lg self-center ml-8 p-5">{profile?.bio}</p>
+          <p className="max-w-lg self-center ml-8 p-5">{profile?.bio}</p>
+        </div>
+
         <div>
-          <h2>CV</h2>
-          <Timeline></Timeline>
+          <h2 className="text-2xl font-extrabold mx-auto">CV</h2>
+          <div className="flex justify-center gap-4">
+            <div>
+              <h2 className="text-2xl font-extrabold mx-auto">Education</h2>
+              <Timeline>
+                {profile &&
+                  profile.cv.education.map((education) => (
+                    <Timeline.Item key={education.id}>
+                      <Timeline.Point icon={HiCalendar} />
+                      <Timeline.Content>
+                        <Timeline.Time>{education.year}</Timeline.Time>
+                        <Timeline.Title>{education.degree}</Timeline.Title>
+                        <Timeline.Body>{education.school}</Timeline.Body>
+                      </Timeline.Content>
+                    </Timeline.Item>
+                  ))}
+              </Timeline>
+            </div>
+            <div>
+              <h2 className="text-2xl font-extrabold mx-auto">Experience</h2>
+              <Timeline>
+                {profile?.cv.experience.map((experience) => (
+                  <Timeline.Item key={experience.id}>
+                    <Timeline.Point icon={HiCalendar} />
+                    <Timeline.Content>
+                      <Timeline.Time>{experience.year}</Timeline.Time>
+                      <Timeline.Title>{experience.title}</Timeline.Title>
+                      <Timeline.Body>{experience.company}</Timeline.Body>
+                    </Timeline.Content>
+                  </Timeline.Item>
+                ))}
+              </Timeline>
+            </div>
+          </div>
         </div>
       </div>
       <div className="flex justify-start align-center p-4">
