@@ -7,6 +7,7 @@ import ProjectDetails from "./components/ProjectDetails";
 import News from "./components/News";
 import telekomLogo from "./assets/telekom-logo.svg";
 import ProfileModal from "./components/ProfileModal";
+import EventDetails from "./components/EventDetails";
 import { useState } from "react";
 import "./App.css";
 
@@ -55,6 +56,7 @@ function App() {
           <Route path="/profile/:id" element={<Profile />} />
           <Route path="/news" element={<News />} />
           <Route path="/project/:id" element={<ProjectDetails />} />
+          <Route path="/event/:id" element={<EventDetails />} />
         </Routes>
       </Router>
       <a href="https://www.flaticon.com/free-icons/user" title="user icons">

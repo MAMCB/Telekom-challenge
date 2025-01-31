@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { Button, Timeline } from "flowbite-react";
 import { HiArrowNarrowRight, HiCalendar } from "react-icons/hi";
+import { Link } from "react-router-dom";
 
 interface CalendarProps {
   year: number;
@@ -196,10 +197,12 @@ const Calendar = ({year,month,monthName}:CalendarProps) => {
                     >
                       {event.description}
                     </Timeline.Body>
-                    <Button color="gray">
-                      Details
-                      <HiArrowNarrowRight className="ml-2 h-3 w-3" />
-                    </Button>
+                    <Link to={`/event/${event.id}`}>
+                      <Button color="gray">
+                        Details
+                        <HiArrowNarrowRight className="ml-2 h-3 w-3" />
+                      </Button>
+                    </Link>
                   </Timeline.Content>
                 </Timeline.Item>
               ))}
