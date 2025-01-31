@@ -48,22 +48,22 @@
           "id": 1,
           "title": "News 1",
           "description": "Description 1",
-          "image": "image1.jpg",
-          "category": "Category 1"
+          "image": "/images/software-engineering.jpg",
+          "category": "Engineering"
         },
         {
           "id": 2,
           "title": "News 2",
           "description": "Description 2",
-          "image": "image2.jpg",
-          "category": "Category 1"
+          "image": "/images/tech-presentation.jpg",
+          "category": "AI"
         },
         {
           "id": 3,
           "title": "News 3",
           "description": "Description 3",
-          "image": "image3.jpg",
-          "category": "Category 2"
+          "image": "/images/campus.jpg",
+          "category": "Media"
         }
     ],
     "events": [
