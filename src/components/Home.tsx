@@ -28,7 +28,7 @@ const Home = () => {
         <Cards route="/projects" img={techPresentationImage} title="Projects" description="Explore the latest projects within Telekom" />
         <Cards route="/events" img={campusImage} title="Events" description="Explore the latest events within Telekom" />
       </Carousel>
-      <div className="mx-5 my-5 flex justify-between" >
+      <div className="mx-5 my-5 flex justify-between flex-col lg:flex-row" >
         <Calendar year={currentYear} month={currentMonth} monthName={months[currentMonth]} />
         <ProjectGrid />
       </div>
