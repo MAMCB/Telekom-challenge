@@ -25,7 +25,14 @@ const EventDetails = () => {
   return (
     <>
       {event && (
-        <Details title={event.title} description={event.description} image={event.image} />
+        <Details
+          id={parseInt(id!)}
+          title={event.title}
+          description={event.description}
+          image={event.image}
+          addButton={true}
+          addType="my events"
+        />
       )}
     </>
   );

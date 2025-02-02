@@ -23,7 +23,7 @@ const ProjectDetails = () => {
   return (
     <>
       {project && (
-       <Details title={project.title} description={project.description} image={project.image} />
+       <Details id={parseInt(id!)} title={project.title} description={project.description} image={project.image} addButton={true} addType="my projects" />
       )}
     </>
   );

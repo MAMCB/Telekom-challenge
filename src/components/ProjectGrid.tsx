@@ -4,7 +4,8 @@
 import Cards from "./Cards";
 import { useState } from "react";
 import { useEffect } from "react";
-interface Project {
+
+export interface Project {
   id: number;
   title: string;
   description: string;

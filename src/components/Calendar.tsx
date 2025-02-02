@@ -12,7 +12,7 @@ interface CalendarProps {
   
 }
 
-interface Events{
+export interface Events{
   id:number;
   title:string;
   description:string;

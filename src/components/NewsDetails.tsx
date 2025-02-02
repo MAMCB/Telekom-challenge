@@ -23,7 +23,12 @@ const NewsDetails = () => {
   return (
     <>
       {newsEntity && (
-        <Details title={newsEntity.title} description={newsEntity.description} image={newsEntity.image} />
+        <Details
+          id={parseInt(id!)}
+          title={newsEntity.title}
+          description={newsEntity.description}
+          image={newsEntity.image}
+        />
       )}
     </>
   );
