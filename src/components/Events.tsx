@@ -34,6 +34,7 @@ const Events = () => {
               img={event.image}
               title={event.title}
               description={event.description}
+              subtitle={`${event.day}/${event.month}/${event.year}`}
             />
           ))}
       </div>

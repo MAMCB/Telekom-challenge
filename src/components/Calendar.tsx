@@ -201,7 +201,7 @@ const Calendar = ({year,month,monthName}:CalendarProps) => {
                           : ""
                       }
                     >
-                      {event.description}
+                      <p className="max-w-lg">{event.description}</p>
                     </Timeline.Body>
                     <Link to={`/event/${event.id}`}>
                       <Button color="gray">

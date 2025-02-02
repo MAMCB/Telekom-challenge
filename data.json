@@ -47,21 +47,21 @@
         {
           "id": 1,
           "title": "News 1",
-          "description": "Description 1",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pulvinar leo varius,\n fermentum ex id, faucibus eros. Morbi eros velit, mollis sit amet quam et, convallis pulvinar ante.\n Mauris vel est eu est sagittis ultricies non nec dolor. Nulla cursus metus quis auctor tincidunt. Maecenas ac leo fringilla, fermentum erat eu, \naliquet purus. Duis feugiat quam dictum molestie rhoncus. Maecenas sit amet justo id nulla malesuada efficitur eget sit amet lectus.",
           "image": "/images/software-engineering.jpg",
           "category": "Engineering"
         },
         {
           "id": 2,
           "title": "News 2",
-          "description": "Description 2",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pulvinar leo varius,\n fermentum ex id, faucibus eros. Morbi eros velit, mollis sit amet quam et, convallis pulvinar ante.\n Mauris vel est eu est sagittis ultricies non nec dolor. Nulla cursus metus quis auctor tincidunt. Maecenas ac leo fringilla, fermentum erat eu, \naliquet purus. Duis feugiat quam dictum molestie rhoncus. Maecenas sit amet justo id nulla malesuada efficitur eget sit amet lectus.",
           "image": "/images/tech-presentation.jpg",
           "category": "AI"
         },
         {
           "id": 3,
           "title": "News 3",
-          "description": "Description 3",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pulvinar leo varius,\n fermentum ex id, faucibus eros. Morbi eros velit, mollis sit amet quam et, convallis pulvinar ante.\n Mauris vel est eu est sagittis ultricies non nec dolor. Nulla cursus metus quis auctor tincidunt. Maecenas ac leo fringilla, fermentum erat eu, \naliquet purus. Duis feugiat quam dictum molestie rhoncus. Maecenas sit amet justo id nulla malesuada efficitur eget sit amet lectus.",
           "image": "/images/campus.jpg",
           "category": "Media"
         }
@@ -70,7 +70,7 @@
         {
             "id": 1,
             "title": "Event 1",
-            "description": "Description 1",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pulvinar leo varius,\n fermentum ex id, faucibus eros. Morbi eros velit, mollis sit amet quam et, convallis pulvinar ante.\n Mauris vel est eu est sagittis ultricies non nec dolor. Nulla cursus metus quis auctor tincidunt. Maecenas ac leo fringilla, fermentum erat eu, \naliquet purus. Duis feugiat quam dictum molestie rhoncus. Maecenas sit amet justo id nulla malesuada efficitur eget sit amet lectus.",
             "image": "/images/software-engineering.jpg",
             "month": 2,
             "day": 29,
@@ -79,7 +79,7 @@
         {
           "id": 2,
           "title": "Event 2",
-          "description": "Description 2",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pulvinar leo varius,\n fermentum ex id, faucibus eros. Morbi eros velit, mollis sit amet quam et, convallis pulvinar ante.\n Mauris vel est eu est sagittis ultricies non nec dolor. Nulla cursus metus quis auctor tincidunt. Maecenas ac leo fringilla, fermentum erat eu, \naliquet purus. Duis feugiat quam dictum molestie rhoncus. Maecenas sit amet justo id nulla malesuada efficitur eget sit amet lectus.",
           "image": "/images/neural-network.jpg",
           "month": 1,
           "day": 16,
@@ -88,7 +88,7 @@
         {
           "id": 3,
           "title": "Event 3",
-          "description": "Description 3",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pulvinar leo varius,\n fermentum ex id, faucibus eros. Morbi eros velit, mollis sit amet quam et, convallis pulvinar ante.\n Mauris vel est eu est sagittis ultricies non nec dolor. Nulla cursus metus quis auctor tincidunt. Maecenas ac leo fringilla, fermentum erat eu, \naliquet purus. Duis feugiat quam dictum molestie rhoncus. Maecenas sit amet justo id nulla malesuada efficitur eget sit amet lectus.",
           "image": "/images/campus.jpg",
           "month": 3,
           "day": 5,
