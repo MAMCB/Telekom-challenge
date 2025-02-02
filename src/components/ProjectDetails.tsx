@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { useParams } from "react-router-dom"
 import { useEffect } from "react"
+import Details from "./Details"
 
 interface Project {
 
@@ -22,13 +23,7 @@ const ProjectDetails = () => {
   return (
     <>
       {project && (
-        <div className="p-5">
-          <h1 className="telekom-title">{project.title}</h1>
-          <div className="flex justify-center align-center p-4">
-            <img src={project.image} alt={project.title} className="rounded-lg w-1/2" />
-            <p className="self-center m-4 text-xl leading-relaxed">{project.description}</p>
-          </div>
-        </div>
+       <Details title={project.title} description={project.description} image={project.image} />
       )}
     </>
   );
