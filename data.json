@@ -71,26 +71,26 @@
             "id": 1,
             "title": "Event 1",
             "description": "Description 1",
-            "image": "image1.jpg",
-            "month": 0,
-            "day": 31,
+            "image": "/images/software-engineering.jpg",
+            "month": 2,
+            "day": 29,
             "year": 2025
         },
         {
           "id": 2,
           "title": "Event 2",
           "description": "Description 2",
-          "image": "image2.jpg",
+          "image": "/images/neural-network.jpg",
           "month": 1,
-          "day": 3,
+          "day": 16,
           "year": 2025
         },
         {
           "id": 3,
           "title": "Event 3",
           "description": "Description 3",
-          "image": "image3.jpg",
-          "month": 2,
+          "image": "/images/campus.jpg",
+          "month": 3,
           "day": 5,
           "year": 2025
         }

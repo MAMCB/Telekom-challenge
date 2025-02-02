@@ -64,9 +64,15 @@ const Calendar = ({year,month,monthName}:CalendarProps) => {
           );
 
           // Merge both event sources
-          setEvents([...initialEvents, ...eventsData]);
+          const completeEvents=[...initialEvents, ...eventsData];
+          const sortedEvents = [...completeEvents].sort(
+          (a, b) => a.year - b.year || a.month - b.month || a.day - b.day
+        );
+        setEvents(sortedEvents);
         });
     }, []);
+
+    
 
 
     const previousMonth = () => {

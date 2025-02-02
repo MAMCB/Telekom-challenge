@@ -48,12 +48,21 @@ const Profile = () => {
     useEffect(() => {
       fetch(`../../data.json`)
         .then((response) => response.json())
-        .then((data) => setProfile(data.profiles.find((profile: Profile) => profile.id === parseInt(id ? id : ""))));
+        .then((data) => {const userProfile =data.profiles.find((profile: Profile) => profile.id === parseInt(id ? id : ""));
+          const sortedEducation = [...userProfile.cv.education].sort(
+            (a, b) => b.year - a.year
+          );
+          const sortedExperience = [...userProfile.cv.experience].sort(
+            (a, b) => b.year - a.year
+          );
+          setProfile({
+            ...userProfile,
+            cv: { education: sortedEducation, experience: sortedExperience },
+          });
+        });
     }, [id]);
 
-    useEffect(() => {
-      console.log(profile);
-    }, [profile]);
+    
   return (
     <div className="p-8">
       <h1 className="self-center lg:ml-48 telekom-title">{profile?.name}</h1>
@@ -72,7 +81,7 @@ const Profile = () => {
               <Timeline>
                 {profile &&
                   profile.cv.education.map((education) => (
-                    <Timeline.Item key={education.id}>
+                    <Timeline.Item key={education.id + "education"}>
                       <Timeline.Point icon={HiCalendar} />
                       <Timeline.Content>
                         <Timeline.Time>{education.year}</Timeline.Time>
@@ -87,7 +96,7 @@ const Profile = () => {
               <h2 className="text-2xl font-extrabold mx-auto">Experience</h2>
               <Timeline>
                 {profile?.cv.experience.map((experience) => (
-                  <Timeline.Item key={experience.id}>
+                  <Timeline.Item key={experience.id + "experience"}>
                     <Timeline.Point icon={HiCalendar} />
                     <Timeline.Content>
                       <Timeline.Time>{experience.year}</Timeline.Time>
@@ -106,7 +115,7 @@ const Profile = () => {
           <h2 className="lg:ml-32">{profile?.email}</h2>
           <div className=" lg:ml-32 grid grid-cols-3 gap-4">
             {profile?.socialMedia.map((socialMedia) => (
-              <a target="_blank" href={socialMedia.url}>
+              <a target="_blank" href={socialMedia.url} key={socialMedia.name}>
                 <img
                   className="w-10"
                   src={socialMedia.logo}
