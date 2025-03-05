@@ -15,7 +15,7 @@ interface Event {
 const Events = () => {
   const [events, setEvents] = useState<Event[]>([]);
   useEffect(() => {
-    fetch(`../../data.json`)
+    fetch(`/data.json`)
       .then((response) => response.json())
       .then((data) => setEvents(data.events));
   }, []);

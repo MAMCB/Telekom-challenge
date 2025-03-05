@@ -22,7 +22,7 @@ const Details = ({id,title,image,description, subtitle=null,addButton=false,addT
     const [storedInProfile,setStoredInProfile] = useState<boolean>(false);
     // Fetch the item and determine if it's stored in profile or localStorage
   useEffect(() => {
-    fetch(`../../data.json`)
+    fetch(`/data.json`)
       .then((response) => response.json())
       .then((data) => {
         let foundItem = null;

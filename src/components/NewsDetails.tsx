@@ -16,7 +16,7 @@ const NewsDetails = () => {
   const { id } = useParams<{ id: string }>();
       const [newsEntity, setNewsEntity] = useState<News|null>(null)
       useEffect(() => {
-          fetch(`../../data.json`)
+          fetch(`/data.json`)
           .then((response) => response.json())
           .then((data) => setNewsEntity(data.news.find((newsEntity:News) => newsEntity.id === parseInt(id? id : ""))))
       }, [id])

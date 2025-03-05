@@ -46,7 +46,7 @@ const Profile = () => {
    const { id } = useParams<{ id: string }>();
    const [profile, setProfile] = useState<Profile | null>(null);
     useEffect(() => {
-      fetch(`../../data.json`)
+      fetch(`/data.json`)
         .then((response) => response.json())
         .then((data) => {const userProfile =data.profiles.find((profile: Profile) => profile.id === parseInt(id ? id : ""));
           const sortedEducation = [...userProfile.cv.education].sort(

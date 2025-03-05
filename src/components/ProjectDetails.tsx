@@ -16,7 +16,7 @@ const ProjectDetails = () => {
     const { id } = useParams<{ id: string }>();
     const [project, setProject] = useState<Project|null>(null)
     useEffect(() => {
-        fetch(`../../data.json`)
+        fetch(`/data.json`)
         .then((response) => response.json())
         .then((data) => setProject(data.projects.find((project:Project) => project.id === parseInt(id? id : ""))))
     }, [id])

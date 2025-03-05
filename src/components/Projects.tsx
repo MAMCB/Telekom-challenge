@@ -15,7 +15,7 @@ const Projects = () => {
   const [projects, setProjects] = useState<Project[]>([]);
   const [categories, setCategories] = useState<string[]>([]);
   useEffect(() => {
-    fetch(`../../data.json`)
+    fetch(`/data.json`)
       .then((response) => response.json())
       .then((data) => setProjects(data.projects));
   }, []);

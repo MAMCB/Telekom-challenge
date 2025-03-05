@@ -15,7 +15,7 @@ const News = () => {
   const [news, setNews] = useState<News[]>([]);
     const [categories, setCategories] = useState<string[]>([]);
     useEffect(() => {
-      fetch(`../../data.json`)
+      fetch(`/data.json`)
         .then((response) => response.json())
         .then((data) => setNews(data.news));
     }, []);

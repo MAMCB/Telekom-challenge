@@ -18,7 +18,7 @@ const EventDetails = () => {
    const { id } = useParams<{ id: string }>();
         const [event, setEvent] = useState<Event|null>(null)
         useEffect(() => {
-            fetch(`../../data.json`)
+            fetch(`/data.json`)
             .then((response) => response.json())
             .then((data) => setEvent(data.events.find((event:Event) => event.id === parseInt(id? id : ""))))
         }, [id])
