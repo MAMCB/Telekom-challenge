@@ -76,6 +76,19 @@ border: 1px solid rgba(255, 255, 255, 0.3);
 font-weight: 600;
 }
 
+.card-link{
+  transition: transform 0.3s ease;
+  border-radius: 16px;
+}
+
+.card-link:hover{
+  transform: scale(1.05);
+}
+
+.button:hover{
+  background-color: #E5E7EB;
+}
+
 
 
 .nav{
@@ -84,7 +97,7 @@ font-weight: 600;
   line-height: 2rem;
 }
 
-.nav a:hover , .profile-modal a:hover , .nav svg:hover{
+.nav a:hover , .profile-modal a:hover , .nav svg:hover, .footer-a:hover{
   color: #e20074;
   cursor: pointer;
 }

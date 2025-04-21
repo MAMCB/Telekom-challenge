@@ -9,6 +9,7 @@ import telekomLogo from "./assets/telekom-logo.svg";
 import ProfileModal from "./components/ProfileModal";
 import EventDetails from "./components/EventDetails";
 import NewsDetails from "./components/NewsDetails";
+import Footer from "./components/Footer";
 import { useState } from "react";
 import "./App.css";
 
@@ -49,6 +50,7 @@ function App() {
         <div onMouseLeave={handleMouseLeave}>
           <ProfileModal visible={isHovered} signedUp={true} userId={1} />
         </div>
+        
 
         <Routes>
           <Route path="/" element={<Home />} />
@@ -60,10 +62,9 @@ function App() {
           <Route path="/event/:id" element={<EventDetails />} />
           <Route path="/news/:id" element={<NewsDetails />} />
         </Routes>
+        <Footer/>
       </Router>
-      <a href="https://www.flaticon.com/free-icons/user" title="user icons">
-        User icons created by Freepik - Flaticon
-      </a>
+     
     </>
   );
 }

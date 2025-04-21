@@ -11,7 +11,7 @@ interface CardProps {
 
 const Cards = ({route,img,title,description,miniature=false,subtitle=null}:CardProps) => {
   return (
-    <Link to={route}>
+    <Link className="card-link" to={route}>
       {!miniature ? (
         <div
           className="background-image p-6 flex justify-end"

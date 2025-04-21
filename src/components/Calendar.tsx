@@ -153,9 +153,9 @@ const Calendar = ({year,month,monthName}:CalendarProps) => {
                   </div>
                 ))}
               </div>
-              <div className="flex justify-center gap-4">
-                <button onClick={previousMonth}>Previous</button>
-                <button onClick={nextMonth}>Next</button>
+              <div className="flex justify-center gap-4 my-3">
+                <button className="rounded-lg border border-gray-400  p-2 button" onClick={previousMonth}>Previous</button>
+                <button className="rounded-lg border border-gray-400 p-2 button" onClick={nextMonth}>Next</button>
               </div>
             </div>
           )}
